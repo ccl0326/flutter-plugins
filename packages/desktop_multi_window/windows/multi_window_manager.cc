@@ -29,7 +29,7 @@ class FlutterMainWindow : public BaseFlutterWindow {
  protected:
 
   HWND GetWindowHandle() override {
-    return hwnd_;
+    return GetAncestor(hwnd_, GA_ROOT);
   }
 
  private:
